@@ -1,0 +1,33 @@
+<h1>Listing only_layouts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Qualification</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @only_layouts.each do |only_layout| %>
+      <tr>
+        <td><%= only_layout.name %></td>
+        <td><%= only_layout.age %></td>
+        <td><%= only_layout.qualification %></td>
+        <td><%= only_layout.description %></td>
+        <td><%= link_to 'Show', only_layout %></td>
+        <td><%= link_to 'Edit', edit_only_layout_path(only_layout) %></td>
+        <td><%= link_to 'Destroy', only_layout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Only layout', new_only_layout_path %>

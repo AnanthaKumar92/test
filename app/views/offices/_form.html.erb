@@ -1,0 +1,12 @@
+<%= simple_form_for @office, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.association :employee %>
+  <%= f.input :position %>
+  <%= f.input :salary_id %>
+  <%= f.input :city_id %>
+  <%= f.input :mobile %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                offices_path, :class => 'btn' %>
+  </div>
+<% end %>

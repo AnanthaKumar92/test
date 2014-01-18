@@ -1,0 +1,27 @@
+<h1>Listing positons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Work position</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @positons.each do |positon| %>
+      <tr>
+        <td><%= positon.work_position %></td>
+        <td><%= link_to 'Show', positon %></td>
+        <td><%= link_to 'Edit', edit_positon_path(positon) %></td>
+        <td><%= link_to 'Destroy', positon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Positon', new_positon_path %>

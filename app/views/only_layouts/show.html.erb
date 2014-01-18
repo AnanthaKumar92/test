@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @only_layout.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @only_layout.age %>
+</p>
+
+<p>
+  <strong>Qualification:</strong>
+  <%= @only_layout.qualification %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @only_layout.description %>
+</p>
+
+<%= link_to 'Edit', edit_only_layout_path(@only_layout) %> |
+<%= link_to 'Back', only_layouts_path %>

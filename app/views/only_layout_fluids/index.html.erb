@@ -1,0 +1,33 @@
+<h1>Listing only_layout_fluids</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Qualification</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @only_layout_fluids.each do |only_layout_fluid| %>
+      <tr>
+        <td><%= only_layout_fluid.name %></td>
+        <td><%= only_layout_fluid.age %></td>
+        <td><%= only_layout_fluid.qualification %></td>
+        <td><%= only_layout_fluid.description %></td>
+        <td><%= link_to 'Show', only_layout_fluid %></td>
+        <td><%= link_to 'Edit', edit_only_layout_fluid_path(only_layout_fluid) %></td>
+        <td><%= link_to 'Destroy', only_layout_fluid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Only layout fluid', new_only_layout_fluid_path %>

@@ -1,0 +1,29 @@
+<%- model_class = Office -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:employee_id) %>:</strong></dt>
+  <dd><%= @office.employee_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:position_id) %>:</strong></dt>
+  <dd><%= @office.position_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:salary_id) %>:</strong></dt>
+  <dd><%= @office.salary_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:city_id) %>:</strong></dt>
+  <dd><%= @office.city_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:mobile) %>:</strong></dt>
+  <dd><%= @office.mobile %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              offices_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_office_path(@office), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              office_path(@office),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
